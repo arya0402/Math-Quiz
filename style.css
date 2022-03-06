@@ -1,7 +1,10 @@
 body
 {
 	background-image: url("new background.jpeg");
-	text-align: left;
+}
+
+#game_page {
+	background-image: url("Dolphin_back..jpeg");
 }
 
 #mathHeading {
@@ -21,4 +24,13 @@ body
 {
 	display: inline-block;
 	
+}
+
+#output {
+	background-color: white;
+	border-radius: 10px;
+	border-top: 10px solid magenta;
+	padding: 10px;
+	float: none;
+	text-align: left;
 }
