@@ -26,6 +26,7 @@ document.getElementById("answer_turn").innerHTML = "Answer Turn - " + player2_na
 function send() {
     get_number1 = document.getElementById("number_input1").value;
     get_number2 = document.getElementById("number_input2").value;
+    actual_answer = parseInt(get_number1) * parseInt(get_number2);
     console.log(get_number1);
     console.log(get_number2);
 
