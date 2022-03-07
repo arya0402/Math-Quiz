@@ -1,6 +1,9 @@
 player1_name = localStorage.getItem("player1_name");
 player2_name = localStorage.getItem("player2_name");
 
+question_turn = "player1";
+answer_turn = "player2";
+
 function addUsers() {
     player1_name = document.getElementById("player1_name").value;
     player2_name = document.getElementById("player2_name").value;
@@ -37,4 +40,28 @@ function send() {
     document.getElementById("output").innerHTML = row;
     document.getElementById("number_input1").value = "";
     document.getElementById("number_input2").value = "";
+}
+
+function check() {
+    get_answer = document.getElementById("input_check_box").value;
+
+    if(get_answer == actual_answer) {
+        if(answer_turn == "player1") {
+            player1_score = player1_score + 1;
+            document.getElementById("player1_score").innerHTML = player1_score;
+        }
+        else {
+            player2_score = player2_score + 1;
+            document.getElementById("player2_score").innerHTML = player2_score;
+        }
+
+        if(question_turn == "player1") {
+            question_turn = "player2";
+            document.getElementById("question_turn").innerHTML = "Question Turn - " + player2_name;
+        }
+        else{
+            question_turn == "player1";
+            document.getElementById("question_turn").innerHTML = "Question Turn - " + player1_name;
+        }
+    }
 }
